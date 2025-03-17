@@ -1,0 +1,4 @@
+[Bookmarks]
+[Recent]
+/home/stephane/Dev/RES/CGI_RES/TEXTURES/
+/home/stephane/Dev/CGI/GODOT/PROJECTS/UnknwonPlanetAdventure/Resources/Models/Models_WIP/

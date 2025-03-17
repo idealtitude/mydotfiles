@@ -1,0 +1,1 @@
+{Intel/Mesa Intel(R) HD Graphics 2500 (IVB GT1)/4.2 (Core Profile) Mesa 23.3.6}=SUPPORTED

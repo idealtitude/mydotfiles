@@ -1,0 +1,19 @@
+/home/stephane/.bash_aliases
+/home/stephane/.bash_profile
+/home/stephane/.bashrc
+/home/stephane/.gdbinit
+/home/stephane/.nanorc
+/home/stephane/.profile
+/home/stephane/.rangerdir
+/home/stephane/.sqliterc
+/home/stephane/.tmux.conf
+/home/stephane/.vimrc
+/home/stephane/.config/blender/2.93/config/startup.blend blender/2.92/config/startup.blend
+/home/stephane/.config/blender/2.93/config/userpref.blend blender/2.92/config/userpref.blend
+/home/stephane/.config/helix/themes/stef_theme.toml helix/themes/stef_theme.toml
+/home/stephane/.config/helix/config.toml helix/config.toml
+/home/stephane/.config/i3/config i3/config
+/home/stephane/.config/i3status/config i3status/config
+/home/stephane/.config/micro/settings.json micro/settings.json
+/home/stephane/.config/ranger/rc.conf ranger/rc.conf
+/home/stephane/.config/rofi/config.rasi rofi/config.rasi

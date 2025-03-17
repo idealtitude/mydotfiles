@@ -1,0 +1,12 @@
+theme = "stef_theme"
+
+[editor.soft-wrap]
+enable = true
+max-wrap = 25
+max-indent-retain = 0
+wrap-indicator = ""
+
+[editor.lsp]
+auto-signature-help = true
+display-messages = true
+display-inlay-hints = true
