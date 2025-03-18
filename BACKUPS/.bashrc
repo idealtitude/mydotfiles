@@ -76,3 +76,4 @@ bind '"\ez":"zoxide_fzf\n"'
 
 # Set English as preferred language in the terminal, then French
 export LANGUAGE=en_US.UTF-8:fr_FR.UTF-8
+export PATH="$HOME/.npm-packages/bin:$PATH"
