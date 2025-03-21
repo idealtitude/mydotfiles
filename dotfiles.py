@@ -71,9 +71,6 @@ def exec_cmd(cmd: list[str]) -> bool:
                     print(output.strip())
             rc = res.poll()
 
-            if cmd[0] == "rsync":
-                print(rc)
-
         except subprocess.CalledProcessError as ex:
             exec_result = False
             print(f"Command failed with return code {ex.returncode}: {ex}")
@@ -84,7 +81,7 @@ def exec_cmd(cmd: list[str]) -> bool:
 def get_args() -> Any:
     """Parsing command line arguments"""
     parser: Any = argparse.ArgumentParser(
-        prog=f"{__app_name__}", description="Backup ditfiles with rsync", epilog=f"Do `{__app_name__} --help` for the usage"
+        prog=f"{__app_name__}", description="Backup dotfiles with rsync", epilog=f"Do `{__app_name__} --help` for the usage"
     )
 
     parser.add_argument("-d", "--diffonly", action="store_true", help="Perform a `diff` only")
