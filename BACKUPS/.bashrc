@@ -17,7 +17,7 @@ fi
 export PATH
 
 # Does not work...
-# if [[ $UID -eq 0 ]]; then
+# if [[ $EUID -eq 0 ]]; then
     # export PS1='(\[\e[38;5;154m\]\w\[\e[0m\] \[\e[38;5;208m\]#\[\e[0m\]) \[\e[38;5;121m\]\t\n\[\e[0m\]% '
 # else
     # export PS1='(\[\e[38;5;39m\]\W\[\e[0m\] \[\e[38;5;214m\]\$\[\e[0m\]) \[\e[38;5;212m\]\t\[\e[0m\]\n% '
@@ -76,4 +76,6 @@ bind '"\ez":"zoxide_fzf\n"'
 
 # Set English as preferred language in the terminal, then French
 export LANGUAGE=en_US.UTF-8:fr_FR.UTF-8
+
+# Set path for node and npm
 export PATH="$HOME/.npm-packages/bin:$PATH"

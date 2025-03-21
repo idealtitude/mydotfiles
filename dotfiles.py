@@ -70,7 +70,10 @@ def exec_cmd(cmd: list[str]) -> bool:
                 if output:
                     print(output.strip())
             rc = res.poll()
-            print(rc)
+
+            if cmd[0] == "rsync":
+                print(rc)
+
         except subprocess.CalledProcessError as ex:
             exec_result = False
             print(f"Command failed with return code {ex.returncode}: {ex}")

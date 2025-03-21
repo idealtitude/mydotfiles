@@ -8,8 +8,9 @@
 /home/stephane/.sqliterc
 /home/stephane/.tmux.conf
 /home/stephane/.vimrc
-/home/stephane/.config/blender/2.93/config/startup.blend blender/2.92/config/startup.blend
-/home/stephane/.config/blender/2.93/config/userpref.blend blender/2.92/config/userpref.blend
+/home/stephane/.Xresources
+/home/stephane/.config/blender/3.3/config/startup.blend blender/3.3/config/startup.blend
+/home/stephane/.config/blender/3.3/config/userpref.blend blender/3.3/config/userpref.blend
 /home/stephane/.config/helix/themes/stef_theme.toml helix/themes/stef_theme.toml
 /home/stephane/.config/helix/config.toml helix/config.toml
 /home/stephane/.config/i3/config i3/config

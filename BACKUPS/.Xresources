@@ -1,0 +1,15 @@
+xterm*faceName: Source Code Pro Regular
+xterm*faceSize: 9
+
+xterm*loginshell : true
+
+xterm*foreground: rgb:ee/ee/ee
+xterm*background: rgb:11/11/11
+
+xterm*rightScrollBar: true
+xterm*ScrollBar: true
+!xterm*scrollTtyOuput: false
+
+xterm*bellIsUrgent: false
+xterm*audibleBell: false
+

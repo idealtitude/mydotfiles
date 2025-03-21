@@ -1,2 +1,0 @@
-/home/stephane/Dev/CGI/GODOT/PROJECTS/UnknwonPlanetAdventure/Resources/Models/Models_WIP/spaceship.blend
-/home/stephane/Dev/CGI/GODOT/PROJECTS/UnknwonPlanetAdventure/Resources/Models/Models_WIP/terrain_blend.blend
