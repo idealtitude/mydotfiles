@@ -74,6 +74,7 @@ lldb
 llvm
 llvm-devel
 lm_sensors
+lnav
 lshw
 ltrace
 lynx
