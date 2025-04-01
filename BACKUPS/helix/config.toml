@@ -6,7 +6,12 @@ max-wrap = 25
 max-indent-retain = 0
 wrap-indicator = ""
 
+[editor.cursor-shape]
+insert = "bar"
+normal = "bar"
+select = "underline"
+
 [editor.lsp]
 auto-signature-help = true
 display-messages = true
-display-inlay-hints = true
+display-inlay-hints = false

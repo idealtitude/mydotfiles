@@ -7,6 +7,10 @@ anaconda
 anaconda-install-env-deps
 anaconda-live
 arandr
+aspell
+aspell-en
+aspell-fr
+aspell-he
 atril
 bat
 blackbox-terminal
@@ -46,6 +50,8 @@ gstreamer1-plugin-openh264
 guake
 helix
 httpd-manual
+hunspell-fr
+hunspell-he
 inkscape
 kernel
 kernel
@@ -95,6 +101,7 @@ php-cli
 php-manual-en
 phpMyAdmin
 picom
+poedit
 pv
 python-pip-doc
 python3-bpython
@@ -118,6 +125,7 @@ strace
 swell-foop
 system-config-printer
 tealdeer
+timeshift
 translate-shell
 utf8proc-devel
 valgrind
@@ -128,6 +136,7 @@ xfce4-clipman-plugin
 xfce4-power-manager
 xsel
 xset
+xsetroot
 xterm
 xwininfo
 zoxide

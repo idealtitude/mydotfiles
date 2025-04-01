@@ -1,3 +1,19 @@
 inherits = "default"
 
 "ui.background" = { bg = "#23162C" } # original color: #3B224C
+"ui.gutter" = { bg = "#1e1324" }
+
+"ui.cursor" = { fg = "white", modifiers = ["reversed"] }
+#"ui.cursor.primary" = { fg = "white", modifiers = ["reversed"] }
+#"ui.cursor.match" = { fg = "blue", modifiers = ["underlined"]}
+
+#"ui.cursor"	
+"ui.cursor.normal" = { fg = "#ffffff", modifiers = ["reversed"] }
+"ui.cursor.insert" = { fg = "#ffffff", modifiers = ["reversed"] }
+"ui.cursor.select" = { fg = "#ffffff", modifiers = ["reversed"] }
+"ui.cursor.match"	= { fg = "#ffffff", modifiers = ["reversed"] }
+"ui.cursor.primary" = { fg = "#ffffff", modifiers = ["reversed"] }
+"ui.cursor.primary.normal" = { fg = "#ffffff", modifiers = ["reversed"] }
+"ui.cursor.primary.insert" = { fg = "#ffffff", modifiers = ["reversed"] }
+"ui.cursor.primary.select" = { fg = "#ffffff", modifiers = ["reversed"] }
+
