@@ -1,4 +1,4 @@
-xterm*faceName: Source Code Pro Regular
+xterm*faceName: DejaVu Sans Mono
 xterm*faceSize: 9
 
 xterm*loginshell : true

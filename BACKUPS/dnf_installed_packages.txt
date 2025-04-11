@@ -1,3 +1,4 @@
+SDL2-devel
 ShellCheck
 Thunar
 aajohan-comfortaa-fonts
@@ -28,6 +29,7 @@ dhex
 dia
 dracut-live
 editorconfig
+emacs
 eza
 fbida
 fbida-ida
@@ -42,6 +44,9 @@ gcolor3
 ghex
 gimp
 git-delta
+glew-devel
+glfw-devel
+glm-devel
 gnome-font-viewer
 gnome-keyring-pam
 gnome-mahjongg
@@ -85,12 +90,15 @@ lshw
 ltrace
 lynx
 mariadb-server
+mesa-libGL-devel
+mesa-libGLU-devel
 micro
 mozilla-openh264
 mypaint
 nasm
 nasm-doc
 ncurses-devel
+neovim
 netcat
 nmap
 nodejs

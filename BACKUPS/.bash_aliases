@@ -35,6 +35,9 @@ alias bp="bpython"
 # Random wallpapers
 alias chwp='feh --recursive --bg-max --randomize ~/Images/WALLPAPERS_00/'
 
+# Make a screenshot
+alias screenshot='maim --select -s'
+
 # jobs
 alias j='jobs -l'
 
