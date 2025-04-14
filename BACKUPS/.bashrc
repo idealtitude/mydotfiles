@@ -72,8 +72,7 @@ function zoxide_fzf() {
 bind '"\ez":"zoxide_fzf\n"'
 
 # Rust
-. "$HOME/.cargo/env"
-
+#
 # Set English as preferred language in the terminal, then French
 export LANGUAGE=en_US.UTF-8:fr_FR.UTF-8
 
