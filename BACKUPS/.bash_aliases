@@ -75,6 +75,8 @@ alias edp='ed -p"% "'
 
 # Quick python server
 alias pyserv="python -m http.server 8000"
+# Quick php server
+alias phpserv="php -S localhost:8000"
 
 # Restrict Wacom to monitor 2
 alias xsw='xsetwacom set "Wacom Intuos S Pen stylus" MapToOutput HDMI-1'
