@@ -8,6 +8,7 @@ anaconda
 anaconda-install-env-deps
 anaconda-live
 arandr
+asciinema
 aspell
 aspell-en
 aspell-fr
@@ -41,6 +42,7 @@ fzf
 galculator
 gcolor2
 gcolor3
+ghc
 ghex
 gimp
 git-delta
@@ -93,6 +95,9 @@ mariadb-server
 mesa-libGL-devel
 mesa-libGLU-devel
 micro
+mozilla-fira-fonts-common
+mozilla-fira-mono-fonts
+mozilla-fira-sans-fonts
 mozilla-openh264
 mypaint
 nasm
@@ -109,13 +114,17 @@ php-cli
 php-manual-en
 phpMyAdmin
 picom
+pipx
 poedit
+prename
 pv
 python-pip-doc
 python3-bpython
 python3-cmake-build-extension
 python3-cmake-build-extension-doc
 python3-docs
+python3-nltk
+python3-notebook
 python3-pip
 python3-virtualenv
 quadrapassel
@@ -129,6 +138,7 @@ sil-ezra-fonts
 sil-ezra-sr-fonts
 sqlite-devel
 sqlite-doc
+sscg
 strace
 swell-foop
 system-config-printer

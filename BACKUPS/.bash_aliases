@@ -4,6 +4,8 @@
 # Personnel Locate
 #alias ploc="locate -d /home/stephane/.hlocate/hlocate.db"
 
+alias sul='su -l'
+
 # Clear screen (short version)
 alias c="clear"
 

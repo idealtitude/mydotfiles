@@ -137,6 +137,12 @@ bindsym $mod+q focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+# Worspaces default
+workspace 1 output LVDS-1
+workspace 2 output HDMI-1
+workspace 3 output LVDS-1
+workspace 4 output HDMI-1
+
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1"
@@ -240,6 +246,9 @@ client.background       #FFFFFF
 #exec --no-startup-id compton &
 #exec --no-startup-id "picom --backend glx &"
 exec --no-startup-id "xset s off -dpms"
+
+# Screenshots
+bindsym Print exec --no-startup-id maim --select -s > "/home/$USER/Images/SCREENSHOTS/$(date +\"%Y%m%d%H%M%S\").png"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
