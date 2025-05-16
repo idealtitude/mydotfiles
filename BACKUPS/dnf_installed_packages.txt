@@ -18,6 +18,7 @@ bat
 blackbox-terminal
 blender
 btop
+celluloid
 clang
 clang-devel
 clipman
@@ -52,6 +53,7 @@ glm-devel
 gnome-font-viewer
 gnome-keyring-pam
 gnome-mahjongg
+golang
 gparted
 gstreamer1-plugin-openh264
 guake
@@ -99,6 +101,7 @@ mozilla-fira-fonts-common
 mozilla-fira-mono-fonts
 mozilla-fira-sans-fonts
 mozilla-openh264
+mpv
 mypaint
 nasm
 nasm-doc
