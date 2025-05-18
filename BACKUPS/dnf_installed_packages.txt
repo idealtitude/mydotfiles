@@ -82,6 +82,7 @@ kernel-modules-extra
 kernel-modules-extra
 langpacks-en
 langpacks-fonts-he
+libXxf86vm-devel
 libuuid-devel
 livesys-scripts
 lld
