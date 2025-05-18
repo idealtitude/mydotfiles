@@ -97,7 +97,7 @@ parse_git_branch_and_status() {
     echo ""
   fi
 }
-export PS1='╭(\[\e[38;5;39m\]\w\[\e[0m\] \[\e[38;5;247m\][\[\e[38;5;226m\]\$\[\e[38;5;247m\]]\[\e[0m\]) \[\e[38;5;247m\]\t\[\e[0m\] \[$(parse_git_branch_and_status)\]\n╰% '
+export PS1='╭(\[\e[38;5;39m\]\w\[\e[0m\] \[\e[38;5;247m\][\[\e[38;5;226m\]\$\[\e[38;5;247m\]]\[\e[0m\]) \[\e[38;5;247m\]\t\[\e[0m\]\[$(parse_git_branch_and_status)\]\n╰% '
 
 # My personnal logs path
 export MYLOGS='/home/stephane/Utils/logs'
