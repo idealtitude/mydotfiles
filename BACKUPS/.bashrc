@@ -16,6 +16,7 @@ fi
 
 export PATH
 
+# Git indicator for PS1, branch + status
 parse_git_branch_and_status() {
   if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
     local branch
@@ -97,7 +98,24 @@ parse_git_branch_and_status() {
     echo ""
   fi
 }
-export PS1='╭(\[\e[38;5;39m\]\w\[\e[0m\] \[\e[38;5;247m\][\[\e[38;5;226m\]\$\[\e[38;5;247m\]]\[\e[0m\]) \[\e[38;5;247m\]\t\[\e[0m\]\[$(parse_git_branch_and_status)\]\n╰% '
+
+# Virtual env custom prompt
+function virtualenv_info(){
+    # Get Virtual Env
+    if [[ -n "$VIRTUAL_ENV" ]]; then
+        # Strip out the path and just leave the env name
+        venv="${VIRTUAL_ENV##*/}"
+    else
+        # In case you don't have one activated
+        venv=''
+    fi
+    [[ -n "$venv" ]] && printf "\e[38;5;214m(%s)\e[0m " "$venv"
+}
+# disable the default virtualenv prompt change
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+
+# My PS1
+export PS1='╭($(virtualenv_info)\[\e[38;5;39m\]\w\[\e[0m\] \[\e[38;5;247m\][\[\e[38;5;226m\]\$\[\e[38;5;247m\]]\[\e[0m\]) \[\e[38;5;247m\]\t\[\e[0m\]\[$(parse_git_branch_and_status)\]\n╰% '
 
 # My personnal logs path
 export MYLOGS='/home/stephane/Utils/logs'

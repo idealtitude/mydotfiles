@@ -49,8 +49,8 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 default_border pixel 0
 default_floating_border pixel 0
 # Windows gaps
-# gaps inner 1px
-# gaps outer 1px
+# gaps inner 0px
+# gaps outer 0px
 # workspace 2 gaps inner 0
 # workspace 2 gaps outer 0
 

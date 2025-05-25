@@ -1,5 +1,5 @@
 # Personnel UpdateDB
-#alias plocu="updatedb -l 0 -o /home/stephane/.hlocate/hlocate.db -U /home/stephane"
+#alias plocup="updatedb -l 0 -o /home/stephane/.hlocate/hlocate.db -U /home/stephane"
 
 # Personnel Locate
 #alias ploc="locate -d /home/stephane/.hlocate/hlocate.db"
@@ -14,14 +14,20 @@ alias l="eza -g --group-directories-first"
 alias ll="eza -lg --group-directories-first"
 alias la="eza -ag --group-directories-first"
 alias lla="eza -lag --group-directories-first"
+# eza full (quite)
+alias lf="eza -lghumUaob --color-scale all --color-scale-mode gradient --icons=always --group-directories-first"
+
+# Copy/Paste
+alias cxsel='xsel -b -i'
+alias pxsel='xsel -b -o'
 
 # number of elements in directory
 # alias lc='python -c "from os import listdir, getcwd; print(len(listdir(getcwd())))"'
-alias lc='eza -l | wc -l'
-alias lca='eza -la | wc -l'
+# alias lc='eza -l | wc -l'
+# alias lca='eza -la | wc -l'
 
 # diff with colors
-alias diff="diff --color=always"
+# alias diff="diff --color=always"
 
 # stat shortcuts
 alias stata='stat -c "%a"'
@@ -32,25 +38,25 @@ alias stataz='stat -c "%a %C"'
 alias mi="micro"
 
 # bpython
-alias bp="bpython"
+# alias bp="bpython"
 
 # Random wallpapers
-alias chwp='feh --recursive --bg-max --randomize ~/Images/WALLPAPERS_00/'
+# alias chwp='feh --recursive --bg-max --randomize ~/Images/WALLPAPERS_00/'
 
 # Make a screenshot
 alias screenshot='maim --select -s'
 
 # jobs
-alias j='jobs -l'
+# alias j='jobs -l'
 
 # ps
-alias p='ps -fp'
+# alias p='ps -fp'
 
 # history tail
-alias h='history | tail -n 10'
+# alias h='history | tail -n'
 
 # appinfos
-alias ai='appinfos'
+# alias ai='appinfos'
 
 # Date now YYYY-MM-DD HH:MM:SS
 alias dnow='date +"%Y-%m-%d %H:%M:%S"'
@@ -70,7 +76,7 @@ alias play="ffplay -nodisp -autoexit"
 alias dplay="ffplay -hide_banner --showmode 2 -autoexit"
 
 # Git session cache
-#alias gitcache="git config --global credential.helper 'cache --timeout=3600'"
+alias gitcache="git config --global credential.helper 'cache --timeout=3600'"
 
 # ed setup
 alias edp='ed -p"% "'
@@ -79,6 +85,9 @@ alias edp='ed -p"% "'
 alias pyserv="python -m http.server 8000"
 # Quick php server
 alias phpserv="php -S localhost:8000"
+
+# Jupyter Notebook
+alias jupynb='jupyter notebook'
 
 # Restrict Wacom to monitor 2
 alias xsw='xsetwacom set "Wacom Intuos S Pen stylus" MapToOutput HDMI-1'
