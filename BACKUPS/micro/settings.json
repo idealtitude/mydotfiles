@@ -1,5 +1,6 @@
 {
-    "colorscheme": "twilight",
+    "colorscheme": "catppuccin-mocha",
+    "hlsearch": true,
     "ignorecase": false,
     "lsp.clangd.args": [
         "-std=c++23",
