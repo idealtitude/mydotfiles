@@ -9,6 +9,9 @@ alias sul='su -l'
 # Clear screen (short version)
 alias c="clear"
 
+# Calendar, first day of the week is sunday
+alias cal='cal -s'
+
 # exa commande
 alias l="eza -g --group-directories-first"
 alias ll="eza -lg --group-directories-first"
@@ -74,6 +77,9 @@ alias rrr='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; 
 # Play medias
 alias play="ffplay -nodisp -autoexit"
 alias dplay="ffplay -hide_banner --showmode 2 -autoexit"
+
+# Radio
+alias radio-shalom='mpv Music/Playlist/radio_shalom.m3u'
 
 # Git session cache
 alias gitcache="git config --global credential.helper 'cache --timeout=3600'"

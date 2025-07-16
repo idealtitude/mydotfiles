@@ -61,7 +61,6 @@ glm-devel
 gnome-font-viewer
 gnome-keyring-pam
 gnome-mahjongg
-golang
 gparted
 gstreamer1-plugin-openh264
 guake

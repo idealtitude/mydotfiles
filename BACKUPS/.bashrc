@@ -185,9 +185,6 @@ export PATH="$HOME/.npm-packages/bin:$PATH"
 # Python uv autocompletion
 eval "$(uv generate-shell-completion bash)"
 
-# Rust Cargo
-. "$HOME/.cargo/env"
-
 # Micro themes
 export "MICRO_TRUECOLOR=1"
 
