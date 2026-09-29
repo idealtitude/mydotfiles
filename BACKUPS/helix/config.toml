@@ -7,7 +7,7 @@ max-indent-retain = 0
 wrap-indicator = ""
 
 [editor.cursor-shape]
-insert = "bar"
+insert = "block"
 normal = "bar"
 select = "underline"
 

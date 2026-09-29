@@ -99,20 +99,20 @@ export PATH
   # fi
 # }
 #
-function is_subshell(){
-    # test_forest=$(ps --forest | wc -l)
-    getdepth=$(pstree -s $$ | sed -r 's/-+/\n/g' | grep -Ec '(bash|sh)')
-    depth=$(( "$getdepth" - 2 ))
-
-    # if [[ "$test_forest" -gt 4 && "$depth" -gt 1 ]]; then
-    if [[ "$depth" -gt 1 ]]; then
-        subsh="subshell"
-    else
-        subsh=''
-    fi
-
-    [[ -n "$subsh" ]] && printf "\e[38;5;119m(%s)\e[0m " "$subsh"
-}
+# function is_subshell(){
+    # # test_forest=$(ps --forest | wc -l)
+    # getdepth=$(pstree -s $$ | sed -r 's/-+/\n/g' | grep -Ec '(bash|sh)')
+    # depth=$(( "$getdepth" - 2 ))
+#
+    # # if [[ "$test_forest" -gt 4 && "$depth" -gt 1 ]]; then
+    # if [[ "$depth" -gt 1 ]]; then
+        # subsh="subshell"
+    # else
+        # subsh=''
+    # fi
+#
+    # [[ -n "$subsh" ]] && printf "\e[38;5;119m(%s)\e[0m " "$subsh"
+# }
 
 # # Virtual env custom prompt
 # function virtualenv_info(){
@@ -130,7 +130,18 @@ function is_subshell(){
 
 # My PS1
 # export PS1='╭($(virtualenv_info)$(is_subshell)\[\e[38;5;39m\]\w\[\e[0m\] \[\e[38;5;247m\][\[\e[38;5;226m\]\$\[\e[38;5;247m\]]\[\e[0m\]) \[\e[38;5;247m\]\t\[\e[0m\]\[$(parse_git_branch_and_status)\]\n╰% '
-export PS1='╭($(is_subshell)\[\e[38;5;39m\]\w\[\e[0m\] \[\e[38;5;247m\][\[\e[38;5;226m\]\$\[\e[38;5;247m\]]\[\e[0m\]) \[\e[38;5;247m\]\t\[\e[0m\]\n╰% '
+# export PS1='╭($(is_subshell)\[\e[38;5;39m\]\w\[\e[0m\] \[\e[38;5;247m\][\[\e[38;5;226m\]\$\[\e[38;5;247m\]]\[\e[0m\]) \[\e[38;5;247m\]\t\[\e[0m\]\n╰% '
+
+# if [ "$TERM" = "linux" ]; then
+    # # Simple, highly legible prompt for raw TTY screens
+    # export PS1="\[\e[32m\]\u@\h\[\e[m\]:\[\e[34m\]\w\[\e[m\]\$ "
+# else
+    # export PS1='╭(\[\e[38;5;39m\]\w\[\e[0m\] \[\e[38;5;247m\][\[\e[38;5;226m\]\$\[\e[38;5;247m\]]\[\e[0m\]) \[\e[38;5;247m\]\t\[\e[0m\]\n╰% '
+# fi
+
+#PS1='\w \$: '
+#PS1='\[\e[38;5;227m\]\w\[\e[0m\] \[\e[38;5;158m\]\$\[\e[0m\]: '
+PS1='\[\e[38;5;227m\]\w\[\e[0m\] \[\e[38;5;122m\]\$\[\e[0m\]: '
 
 # My personnal logs path
 export MYLOGS='/home/stephane/Utils/logs'
@@ -189,3 +200,77 @@ eval "$(uv generate-shell-completion bash)"
 export "MICRO_TRUECOLOR=1"
 
 export GPG_TTY=$(tty)
+. "$HOME/.cargo/env"
+
+# translate-shell functions
+trfh() {
+    trans -b -p fr:he "$1" | fribidi
+}
+
+trhf() {
+    trans -b -p he:fr "$1" | fribidi
+}
+
+treh() {
+    trans -b -p en:he "$1" | fribidi
+}
+
+trhe() {
+    trans -b -p he:en "$1" | fribidi
+}
+
+# Mode dictionnaire complet (Français -> Hébreu) avec gestion RTL
+hedic() {
+    TERM=dumb trans :he "$1" | fribidi
+}
+
+# Mode dictionnaire complet (Hébreu -> Français) avec gestion RTL
+frdic() {
+    TERM=dumb trans he:fr "$1" | fribidi
+}
+
+# cppreference local doc
+cppdoc() {
+    # 1. Chemin système POSIX pur (SANS 'file://')
+    local doc_dir="/home/stephane/Dev/RES/DOCUMENTATIONS/CPP/cppreference/reference/en/cpp"
+
+    # Vérification que le dossier existe bien
+    if [ ! -d "$doc_dir" ]; then
+        echo "Erreur : Le dossier $doc_dir n'existe pas."
+        return 1
+    fi
+
+    # 2. Recherche du fichier HTML correspondant
+    local file
+    file=$(find "$doc_dir" -type f -name "*$1*.html" | head -n 1)
+
+    # 3. Ouverture avec Lynx
+    if [ -n "$file" ]; then
+        lynx "$file"
+    else
+        echo "cppdoc : Aucune page trouvée pour $1"
+    fi
+}
+
+cdoc() {
+    # 1. Chemin système POSIX pur (SANS 'file://')
+    local doc_dir="/home/stephane/Dev/RES/DOCUMENTATIONS/CPP/cppreference/reference/en/c"
+
+    # Vérification que le dossier existe bien
+    if [ ! -d "$doc_dir" ]; then
+        echo "Erreur : Le dossier $doc_dir n'existe pas."
+        return 1
+    fi
+
+    # 2. Recherche du fichier HTML correspondant
+    local file
+    file=$(find "$doc_dir" -type f -name "*$1*.html" | head -n 1)
+
+    # 3. Ouverture avec Lynx
+    if [ -n "$file" ]; then
+        lynx "$file"
+    else
+        echo "cppdoc : Aucune page trouvée pour $1"
+    fi
+}
+

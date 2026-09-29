@@ -9,6 +9,7 @@
 /home/stephane/.tmux.conf
 /home/stephane/.vimrc
 /home/stephane/.Xresources
+/home/stephane/.wezterm.lua
 /home/stephane/.config/blender/3.3/config/startup.blend blender/3.3/config/startup.blend
 /home/stephane/.config/blender/3.3/config/userpref.blend blender/3.3/config/userpref.blend
 /home/stephane/.config/helix/themes/stef_theme.toml helix/themes/stef_theme.toml

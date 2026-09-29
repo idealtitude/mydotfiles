@@ -37,8 +37,15 @@ alias stata='stat -c "%a"'
 alias stataa='stat -c "%A %a %n"'
 alias stataz='stat -c "%a %C"'
 
+## DEV
 # micro
 alias mi="micro"
+# Wasm
+alias init-emsdk="source /home/stephane/Dev/emsdk/emsdk_env.sh"
+
+# run picom
+## Remplacé par start app dans i3/config (dans ~/.config/)
+# alias rp='picom --backend glx &'
 
 # bpython
 # alias bp="bpython"
@@ -57,6 +64,9 @@ alias screenshot='maim --select -s'
 
 # history tail
 # alias h='history | tail -n'
+
+# Disk Usage
+alias dush='du -sh'
 
 # appinfos
 # alias ai='appinfos'

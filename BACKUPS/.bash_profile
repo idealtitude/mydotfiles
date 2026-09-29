@@ -16,3 +16,4 @@ fi
 
 # eval "$(ssh-agent -s)"
 # ssh-add -k ~/.ssh/id_ed25519
+. "$HOME/.cargo/env"
