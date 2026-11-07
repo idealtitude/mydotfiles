@@ -274,3 +274,5 @@ cdoc() {
     fi
 }
 
+
+# source /home/stephane/.config/broot/launcher/bash/br

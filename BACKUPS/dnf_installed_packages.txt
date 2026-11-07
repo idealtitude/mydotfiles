@@ -42,6 +42,7 @@ editorconfig
 emacs
 expect
 eza
+fastfetch
 fbida
 fbida-ida
 fd-find
@@ -115,6 +116,7 @@ lshw
 ltrace
 lynx
 mariadb-server
+meld
 mesa-libGL-devel
 mesa-libGLU-devel
 micro
@@ -132,11 +134,15 @@ neovim
 netcat
 nmap
 nodejs
+opencv
+opencv-devel
+opencv-doc
 pandoc
 perf
 php
 php-cli
 php-manual-en
+php-pecl-xdebug3
 phpMyAdmin
 picom
 pipx
@@ -144,6 +150,7 @@ poedit
 prename
 pv
 python-pip-doc
+python-wxpython4-doc
 python3-bpython
 python3-cmake-build-extension
 python3-cmake-build-extension-doc
@@ -152,6 +159,7 @@ python3-nltk
 python3-notebook
 python3-pip
 python3-virtualenv
+python3-wxpython4
 quadrapassel
 ranger
 readline-devel
@@ -178,6 +186,9 @@ utf8proc-devel
 valgrind
 vim-enhanced
 wayland-devel
+webkit2gtk4.1-devel
+wxGTK-devel
+wxGlade
 xautolock
 xev
 xfce-polkit

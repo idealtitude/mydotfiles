@@ -7,7 +7,9 @@
 alias sul='su -l'
 
 # Clear screen (short version)
-alias c="clear"
+alias c='clear'
+# Reset screen
+alias r='reset'
 
 # Calendar, first day of the week is sunday
 alias cal='cal -s'
@@ -42,6 +44,13 @@ alias stataz='stat -c "%a %C"'
 alias mi="micro"
 # Wasm
 alias init-emsdk="source /home/stephane/Dev/emsdk/emsdk_env.sh"
+
+# Git aliases
+alias gits='git status'
+alias gita='git add .'
+alias gitco='git commit -m'
+alias gitt='git tag'
+alias gitl='git log --oneline'
 
 # run picom
 ## Remplacé par start app dans i3/config (dans ~/.config/)

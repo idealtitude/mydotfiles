@@ -46,8 +46,9 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Windows title bar style
-default_border pixel 0
-default_floating_border pixel 0
+# default_border pixel 0
+default_border pixel 2
+default_floating_border pixel 2
 # Windows gaps
 # gaps inner 0px
 # gaps outer 0px
