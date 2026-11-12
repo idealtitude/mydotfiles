@@ -1,0 +1,11 @@
+layout {
+    // Zone principale découpée (sans barres au-dessus ni en-dessous)
+    pane split_direction="vertical" {
+        pane size="60%" name="Éditeur (micro)" command="micro" focus=true
+        
+        pane split_direction="horizontal" {
+            pane name="Build (make)" command="make" start_suspended=true
+            pane name="Documentation (man)"
+        }
+    }
+}

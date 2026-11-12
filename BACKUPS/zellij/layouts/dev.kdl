@@ -1,0 +1,25 @@
+layout {
+    // Barre d'état Zellij en haut
+    pane size=1 borderless=true {
+        plugin location="zellij:tab-bar"
+    }
+
+    // Zone principale découpée en panneaux
+    pane split_direction="vertical" {
+        // Panneau de gauche (60% de la largeur) : Votre éditeur de texte
+        pane size="60%" name="Éditeur (micro)" command="micro" focus=true
+
+        // Panneau de droite : Divisé horizontalement pour le Build et les Manpages
+        pane split_direction="horizontal" {
+            // Panneau en haut à droite : La commande make
+            pane name="Build (make)" command="make" start_suspended=true
+            // Panneau en bas à droite : Prêt pour vos manpages
+            pane name="Documentation (man)"
+        }
+    }
+
+    // Barre de raccourcis Zellij en bas (très utile pour débuter !)
+    pane size=1 borderless=true {
+        plugin location="zellij:status-bar"
+    }
+}

@@ -26,3 +26,6 @@
 /home/stephane/.config/nvim/lua/stephane/nvimtree.lua nvim/lua/stephane/nvimtree.lua
 /home/stephane/.config/nvim/lua/stephane/options.lua nvim/lua/stephane/options.lua
 /home/stephane/.config/nvim/lua/stephane/plugins.lua nvim/lua/stephane/plugins.lua
+/home/stephane/.config/zellij/config.kdl zellij/config.kdl
+/home/stephane/.config/zellij/layouts/dev.kdl zellij/layouts/dev.kdl
+/home/stephane/.config/zellij/layouts/minimal.kdl zellij/layouts/minimal.kdl
