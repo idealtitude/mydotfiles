@@ -11,3 +11,7 @@ opt.mouse = "a"
 opt.clipboard = "unnamedplus"
 opt.wrap = false
 opt.termguicolors = true
+
+-- Autoriser h, l, les flèches (mode Normal) et les flèches (mode Insertion) à changer de ligne
+opt.whichwrap:append("h,l,<,>,[,]")
+

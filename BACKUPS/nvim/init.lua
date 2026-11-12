@@ -29,4 +29,4 @@ require("stephane.keymaps")
 require("stephane.nvimtree")
 
 -- Cycle through text
-vim.opt.whichwrap:append("h,l,<,>,b,s")
+-- vim.opt.whichwrap:append("h,l,<,>,b,s")

@@ -19,10 +19,10 @@
 /home/stephane/.config/micro/settings.json micro/settings.json
 /home/stephane/.config/ranger/rc.conf ranger/rc.conf
 /home/stephane/.config/rofi/config.rasi rofi/config.rasi
-/home/stephane/.config/nvim/init.lua
-/home/stephane/.config/nvim/lazy-rock.json
-/home/stephane/.config/nvim/lua/stephane/keymaps.lua
-/home/stephane/.config/nvim/lua/stephane/lsp.lua
-/home/stephane/.config/nvim/lua/stephane/nvimtree.lua
-/home/stephane/.config/nvim/lua/stephane/options.lua
-/home/stephane/.config/nvim/lua/stephane/plugins.lua
+/home/stephane/.config/nvim/init.lua nvim/init.lua
+/home/stephane/.config/nvim/lazy-lock.json nvim/lazy-lock.json
+/home/stephane/.config/nvim/lua/stephane/keymaps.lua nvim/lua/stephane/keymaps.lua
+/home/stephane/.config/nvim/lua/stephane/lsp.lua nvim/lua/stephane/lsp.lua
+/home/stephane/.config/nvim/lua/stephane/nvimtree.lua nvim/lua/stephane/nvimtree.lua
+/home/stephane/.config/nvim/lua/stephane/options.lua nvim/lua/stephane/options.lua
+/home/stephane/.config/nvim/lua/stephane/plugins.lua nvim/lua/stephane/plugins.lua
