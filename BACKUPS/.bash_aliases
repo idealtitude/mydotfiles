@@ -1,8 +1,7 @@
 # Personnel UpdateDB
-#alias plocup="updatedb -l 0 -o /home/stephane/.hlocate/hlocate.db -U /home/stephane"
-
+alias plocup='updatedb -l 0 -o /home/stephane/.hlocate/hlocate.db -U /home/stephane'
 # Personnel Locate
-#alias ploc="locate -d /home/stephane/.hlocate/hlocate.db"
+alias ploc='locate -d /home/stephane/.hlocate/hlocate.db'
 
 alias sul='su -l'
 
@@ -26,14 +25,6 @@ alias lf="eza -lghumUaob --color-scale all --color-scale-mode gradient --icons=a
 alias cxsel='xsel -b -i'
 alias pxsel='xsel -b -o'
 
-# number of elements in directory
-# alias lc='python -c "from os import listdir, getcwd; print(len(listdir(getcwd())))"'
-# alias lc='eza -l | wc -l'
-# alias lca='eza -la | wc -l'
-
-# diff with colors
-# alias diff="diff --color=always"
-
 # stat shortcuts
 alias stata='stat -c "%a"'
 alias stataa='stat -c "%A %a %n"'
@@ -51,34 +42,14 @@ alias gita='git add .'
 alias gitco='git commit -m'
 alias gitt='git tag'
 alias gitl='git log --oneline'
-
-# run picom
-## Remplacé par start app dans i3/config (dans ~/.config/)
-# alias rp='picom --backend glx &'
-
-# bpython
-# alias bp="bpython"
+# Git session cache
+alias gitcache="git config --global credential.helper 'cache --timeout=3600'"
 
 # Random wallpapers
 # alias chwp='feh --recursive --bg-max --randomize ~/Images/WALLPAPERS_00/'
 
 # Make a screenshot
 alias screenshot='maim --select -s'
-
-# jobs
-# alias j='jobs -l'
-
-# ps
-# alias p='ps -fp'
-
-# history tail
-# alias h='history | tail -n'
-
-# Disk Usage
-alias dush='du -sh'
-
-# appinfos
-# alias ai='appinfos'
 
 # Date now YYYY-MM-DD HH:MM:SS
 alias dnow='date +"%Y-%m-%d %H:%M:%S"'
@@ -90,18 +61,12 @@ alias gcwd='printf "%s" "$(pwd)" | xsel -b -i'
 alias rr='ranger'
 alias rrr='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 
-# Check shell, subshells (doesn't work!)
-# alias shsubsh='[[ "$$" -eq "$BASHPID" ]] && printf "%s\n" "Shell, not subshell" || printf "%s\n" "Subshell, not shell"'
-
 # Play medias
 alias play="ffplay -nodisp -autoexit"
 alias dplay="ffplay -hide_banner --showmode 2 -autoexit"
 
 # Radio
 alias radio-shalom='mpv Music/Playlist/radio_shalom.m3u'
-
-# Git session cache
-alias gitcache="git config --global credential.helper 'cache --timeout=3600'"
 
 # ed setup
 alias edp='ed -p"% "'

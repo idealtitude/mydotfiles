@@ -36,6 +36,7 @@ cppcheck
 dex-autostart
 dhex
 dia
+distrobox
 doxygen-doxywizard
 dracut-live
 editorconfig

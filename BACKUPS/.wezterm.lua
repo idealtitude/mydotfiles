@@ -17,6 +17,9 @@ config.font = wezterm.font_with_fallback({
   'DejaVu Sans Mono',
 })
 
+-- Disable ligatures
+config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
+
 config.keys = {
   -- 1. Libérer Ctrl+Shift+Flèches pour que Micro puisse s'en servir
   { key = 'LeftArrow',  mods = 'CTRL|SHIFT', action = wezterm.action.DisableDefaultAssignment },
