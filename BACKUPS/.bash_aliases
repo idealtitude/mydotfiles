@@ -5,6 +5,9 @@ alias ploc='locate -d /home/stephane/.hlocate/hlocate.db'
 
 alias sul='su -l'
 
+# Gemini chat
+alias gchat="cd ~/GeminiChat && gemini"
+
 # Clear screen (short version)
 alias c='clear'
 # Reset screen

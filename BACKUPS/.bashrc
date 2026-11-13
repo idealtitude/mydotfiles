@@ -16,129 +16,6 @@ fi
 
 export PATH
 
-# Git indicator for PS1, branch + status
-# parse_git_branch_and_status() {
-  # if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
-    # local branch
-    # local actual_local_branch_name
-    # local dirty
-    # local ahead_behind
-    # local status_text
-    # local color_code
-#
-    # branch=$(git symbolic-ref --short HEAD 2>/dev/null)
-    # if [ -z "$branch" ]; then
-      # branch="detached@$(git rev-parse --short HEAD)"
-      # actual_local_branch_name=""
-    # else
-      # actual_local_branch_name="$branch"
-    # fi
-#
-    # dirty=""
-    # ahead_behind=""
-#
-    # if ! git diff --quiet --ignore-submodules=dirty HEAD &>/dev/null; then
-      # dirty="*"
-    # fi
-#
-    # if ! git diff --cached --quiet --ignore-submodules HEAD &>/dev/null; then
-      # dirty+="+"
-    # fi
-#
-    # if [ -n "$(git ls-files --others --exclude-standard)" ]; then
-      # dirty+="?"
-    # fi
-#
-    # if [ -n "$actual_local_branch_name" ]; then
-        # local remote_name
-        # local merge_ref
-        # local remote_tracking_branch_name
-#
-        # remote_name=$(git config branch.$actual_local_branch_name.remote)
-        # merge_ref=$(git config branch.$actual_local_branch_name.merge)
-#
-        # if [ -n "$remote_name" ] && [ -n "$merge_ref" ]; then
-            # remote_tracking_branch_name=${merge_ref#refs/heads/}
-#
-            # if git show-ref --verify --quiet "refs/remotes/$remote_name/$remote_tracking_branch_name"; then
-                # local ahead
-                # local behind
-#
-                # ahead=$(git rev-list --left-right --count "$remote_name/$remote_tracking_branch_name...HEAD" | cut -f2)
-                # behind=$(git rev-list --left-right --count "$remote_name/$remote_tracking_branch_name...HEAD" | cut -f1)
-#
-                # if [ "$ahead" -gt 0 ]; then
-                    # ahead_behind+="↑$ahead"
-                # fi
-                # if [ "$behind" -gt 0 ]; then
-                    # ahead_behind+="↓$behind"
-                # fi
-            # fi
-        # fi
-    # fi
-#
-    # if [ -n "$dirty" ] || [ -n "$ahead_behind" ]; then
-      # status_text=" ($branch$dirty$ahead_behind)"
-    # else
-      # status_text=" ($branch)"
-    # fi
-#
-    # if [[ "$dirty" == *"+"* ]]; then
-      # color_code="\033[38;5;202m"
-    # elif [[ -n "$dirty" ]]; then
-      # color_code="\033[38;5;220m"
-    # elif [[ -n "$ahead_behind" ]]; then
-      # color_code="\033[38;5;75m"
-    # else
-      # color_code="\033[38;5;76m"
-    # fi
-#
-    # echo -e "${color_code}${status_text}\033[0m"
-  # else
-    # echo ""
-  # fi
-# }
-#
-# function is_subshell(){
-    # # test_forest=$(ps --forest | wc -l)
-    # getdepth=$(pstree -s $$ | sed -r 's/-+/\n/g' | grep -Ec '(bash|sh)')
-    # depth=$(( "$getdepth" - 2 ))
-#
-    # # if [[ "$test_forest" -gt 4 && "$depth" -gt 1 ]]; then
-    # if [[ "$depth" -gt 1 ]]; then
-        # subsh="subshell"
-    # else
-        # subsh=''
-    # fi
-#
-    # [[ -n "$subsh" ]] && printf "\e[38;5;119m(%s)\e[0m " "$subsh"
-# }
-
-# # Virtual env custom prompt
-# function virtualenv_info(){
-    # # Get Virtual Env
-    # if [[ -n "$VIRTUAL_ENV" ]]; then
-        # # Strip out the path and just leave the env name
-        # venv="${VIRTUAL_ENV##*/}"
-    # else
-        # venv=''
-    # fi
-    # [[ -n "$venv" ]] && printf "\e[38;5;214m(%s)\e[0m " "$venv"
-# }
-# # disable the default virtualenv prompt change
-# export VIRTUAL_ENV_DISABLE_PROMPT=1
-
-# My PS1
-# export PS1='╭($(virtualenv_info)$(is_subshell)\[\e[38;5;39m\]\w\[\e[0m\] \[\e[38;5;247m\][\[\e[38;5;226m\]\$\[\e[38;5;247m\]]\[\e[0m\]) \[\e[38;5;247m\]\t\[\e[0m\]\[$(parse_git_branch_and_status)\]\n╰% '
-# export PS1='╭($(is_subshell)\[\e[38;5;39m\]\w\[\e[0m\] \[\e[38;5;247m\][\[\e[38;5;226m\]\$\[\e[38;5;247m\]]\[\e[0m\]) \[\e[38;5;247m\]\t\[\e[0m\]\n╰% '
-
-# if [ "$TERM" = "linux" ]; then
-    # # Simple, highly legible prompt for raw TTY screens
-    # export PS1="\[\e[32m\]\u@\h\[\e[m\]:\[\e[34m\]\w\[\e[m\]\$ "
-# else
-    # export PS1='╭(\[\e[38;5;39m\]\w\[\e[0m\] \[\e[38;5;247m\][\[\e[38;5;226m\]\$\[\e[38;5;247m\]]\[\e[0m\]) \[\e[38;5;247m\]\t\[\e[0m\]\n╰% '
-# fi
-
 #PS1='\w \$: '
 #PS1='\[\e[38;5;227m\]\w\[\e[0m\] \[\e[38;5;158m\]\$\[\e[0m\]: '
 PS1='\[\e[38;5;227m\]\w\[\e[0m\] \[\e[38;5;122m\]\$\[\e[0m\]: '
@@ -201,6 +78,9 @@ export "MICRO_TRUECOLOR=1"
 
 export GPG_TTY=$(tty)
 . "$HOME/.cargo/env"
+
+# Gemini CLI API key
+export GEMINI_API_KEY=""
 
 # translate-shell functions
 trfh() {
@@ -277,31 +157,39 @@ cdoc() {
 
 # source /home/stephane/.config/broot/launcher/bash/br
 
+# Init ssh agent
+init_ssh_agent() {
+    eval "$(ssh-agent -s)"
+    ssh-add ~/.ssh/id_ed25519
+}
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/stephane/miniforge3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/stephane/miniforge3/etc/profile.d/conda.sh" ]; then
-        . "/home/stephane/miniforge3/etc/profile.d/conda.sh"
+initialize_conda() {
+    __conda_setup="$('/home/stephane/miniforge3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+    if [ $? -eq 0 ]; then
+        eval "$__conda_setup"
     else
-        export PATH="/home/stephane/miniforge3/bin:$PATH"
+        if [ -f "/home/stephane/miniforge3/etc/profile.d/conda.sh" ]; then
+            . "/home/stephane/miniforge3/etc/profile.d/conda.sh"
+        else
+            export PATH="/home/stephane/miniforge3/bin:$PATH"
+        fi
     fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+    unset __conda_setup
+    # <<< conda initialize <<<
 
 
-# >>> mamba initialize >>>
-# !! Contents within this block are managed by 'mamba shell init' !!
-export MAMBA_EXE='/home/stephane/miniforge3/bin/mamba';
-export MAMBA_ROOT_PREFIX='/home/stephane/miniforge3';
-__mamba_setup="$("$MAMBA_EXE" shell hook --shell bash --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__mamba_setup"
-else
-    alias mamba="$MAMBA_EXE"  # Fallback on help from mamba activate
-fi
-unset __mamba_setup
+    # >>> mamba initialize >>>
+    # !! Contents within this block are managed by 'mamba shell init' !!
+    export MAMBA_EXE='/home/stephane/miniforge3/bin/mamba';
+    export MAMBA_ROOT_PREFIX='/home/stephane/miniforge3';
+    __mamba_setup="$("$MAMBA_EXE" shell hook --shell bash --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
+    if [ $? -eq 0 ]; then
+        eval "$__mamba_setup"
+    else
+        alias mamba="$MAMBA_EXE"  # Fallback on help from mamba activate
+    fi
+    unset __mamba_setup
+}
 # <<< mamba initialize <<<

@@ -4,18 +4,3 @@
 if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
-
-# User specific environment and startup programs
-# function starting_stef_sess {
-    # sleep 10
-    # picom --backend glx &
-    # xset s off -dpms
-# }
-#
-# starting_stef_sess &
-
-# eval "$(ssh-agent -s)"
-# ssh-add -k ~/.ssh/id_ed25519
-. "$HOME/.cargo/env"
-
-# source /home/stephane/.config/broot/launcher/bash/br
